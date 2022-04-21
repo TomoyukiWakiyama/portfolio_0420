@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex , nofollow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+        <h1 class="header__title">クリ★スタ</h1>
+        <button class="hamburger"><span class="hamburger__line"></span></button>
+        <nav class="gnav">
+            <ul class="gnavList">
+                <li class="gnavList__item"><a class="gnavList__link" href="#">About</a></li>
+                <li class="gnavList__item"><a class="gnavList__link" href="#">Service</a></li>
+                <li class="gnavList__item"><a class="gnavList__link" href="#">News</a></li>
+                <li class="gnavList__item"><a class="gnavList__link" href="#">Contact</a></li>
+            </ul>
+            <!-- /.gnavList -->
+        </nav>
+        <!-- /.gnav -->
+    </header>
+    <!-- /.header -->
+
+    <main>
+        <div class="mainVisual">
+            <div class="mainVisual__inner">
+                <picture class="mainVisual__image">
+                    <source media="(max-width: 600px)" srcset="images/fv-bgi_sp@2x.jpg">
+                    <img src="images/fv-bgi@2x.jpg" alt="スマートフォンを操作している画像">
+                </picture>
+                <p class="mainVisual__title">Cresta Design.</p>
+            </div>
+            <!-- /.mainVisual__inner -->
+        </div>
+        <!-- /.mainVisual -->
+        <section class="about">
+            <h2 class="level2-heading">About</h2>
+            <div class="about__data">
+                <p class="about__title">ミニマルで<br>洗練されたデザインを。</p>
+                <p class="about__text">近年、ミニマルなデザインが流行しています。そこで弊社では、クライアント企業様新規サービス等の課題に対してミニマルで洗練されたデザインを実現させることで解決のサポートを致します。もちろん全てのサービスにおいてミニマルなデザインが課題解決になるわけではないので、課題や今後のサービスの展開等しっかりとヒアリングを行なった上でご提案させて頂きます。</p>
+            </div>
+            <!-- /.about__data -->
+        </section>
+        <!-- /.about -->
+        <section class="service">
+            <h2 class="level2-heading">Service</h2>
+            <ul class="serviceList">
+                <li class="serviceList__item">
+                    <div class="serviceList__image"><img src="images/service-image@2x.jpg" alt="当社の✖️✖️モデルカメラ"></div>
+                    <div class="serviceList__data">
+                        <p class="serviceList__title">リリース時のサポートで<br>サービスのブランディングを</p>
+                        <p class="serviceList__text">弊社では、リリース時もサポートさせて頂きます。プレスリリース用のサイトや動画制作を通して、サービスのブランディングを行わせて頂きます。</p>
+                    </div>
+                </li>
+
+                <li class="serviceList__item _reverse">
+                    <div class="serviceList__image"><img src="images/service-image02@2x.jpg" alt="当社の✖️✖️モデルカメラ"></div>
+                    <div class="serviceList__data">
+                        <p class="serviceList__title">リリース後のサポートで<br>効果を最大化させる</p>
+                        <p class="serviceList__text">弊社では、リリース後もサポートさせて頂きます。サービスはリリース後に様々な課題にぶつかります。そこでクライアント様と一緒に改善を行うことで、デザインの効果を最大化させます。</p>
+                    </div>
+                </li>
+            </ul>
+            <!-- /.serviceList -->
+        </section>
+        <!-- /.service -->
+
+        <section class="news">
+            <h2 class="level2-heading">News</h2>
+            <ul class="newsList">
+                <li class="newsList__item">
+                    <div class="newsList__image"><img src="images/card-image1@2x.jpg" alt=""></div>
+                    <p class="newsList__text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                </li>
+                <li class="newsList__item">
+                    <div class="newsList__image"><img src="images/card-image2@2x.jpg" alt=""></div>
+                    <p class="newsList__text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                </li>
+                <li class="newsList__item">
+                    <div class="newsList__image"><img src="images/card-image3@2x.jpg" alt=""></div>
+                    <p class="newsList__text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                </li>
+            </ul>
+            <!-- /.newsList -->
+        </section>
+        <!-- /.news -->
+
+        <div class="contact">
+            <h2 class="level2-heading">お問い合わせ</h2>
+            <form action="#">
+                <dl class="contactForm">
+                    <dt><label class="contactForm__label" for="name">担当者名</label></dt>
+                    <dd><input class="contactForm__input" type="text" id="name" name="name"></dd>
+                    <dt><label class="contactForm__label" for="tel">電話番号</label></dt>
+                    <dd><input class="contactForm__input" type="tel" id="tel" name="tel" placeholder="09012345678"></dd>
+                    <dt><label class="contactForm__label" for="email">メールアドレス</label></dt>
+                    <dd><input class="contactForm__input" type="email" id="email" name="email"></dd>
+                    <dt><label class="contactForm__label" for="require">お問い合わせ内容</label></dt>
+                    <dd><textarea class="contactForm__textarea" name="require" id="require" cols="30" rows="10"></textarea></dd>
+                </dl>
+                <button class="submit-button" type="submit">送信</button>
+            </form>
+            <!-- /.contact-form -->
+        </div>
+        <!-- /.contact -->
+    </main>
+    <!-- /main -->
+
+    <footer class="footer">
+        <p class="copyright">©︎crest.design all rights reserved</p>
+    </footer>
+    <!-- /.footer -->
+
+  </body>
+</html>

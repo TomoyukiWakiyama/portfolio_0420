@@ -1,0 +1,95 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+
+
+/* .mainVisual
+----------------------------------------*/
+.mainVisual {
+    &__title {
+        width: 450px;
+        font-size: 50px;
+    }
+}
+
+/* .about
+----------------------------------------*/
+.about {
+    width: 70%;
+    max-width: 1200px;
+    margin: 150px auto 0;
+    &__data {
+        margin-top: 77px;
+    }
+}
+
+/* .service
+----------------------------------------*/
+.service {
+    width: 80%;
+    max-width: 1200px;
+    margin: 150px auto 0;
+}
+.serviceList {
+    margin-top: 70px;
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &._reverse {
+            flex-direction: row-reverse;
+        }
+    }
+    &__image {
+        margin-top: 0;
+        width: calc((100% - 70px) /2);
+    }
+    &__item + &__item {
+        margin-top: 50px;
+    }
+    &__data {
+        width: calc((100% - 70px) /2);
+    }
+    &__title {
+        font-size: 24px;
+    }
+}
+
+/* .news
+----------------------------------------*/
+.news {
+    width: 80%;
+    max-width: 1200px;
+    margin: 150px auto 0;
+}
+.newsList {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    &__item {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: calc((100% - 34px) / 3);
+    }
+    &__item + &__item {
+        margin-top: 0;
+    }
+}
+
+/* .contact
+----------------------------------------*/
+.contact {
+    padding-left: 0;
+    padding-right: 0;
+    width: 60%;
+    max-width: 1200px;
+    margin: 150px auto 0;
+    & .level2-heading {
+        font-size: 24px;
+    }
+}
