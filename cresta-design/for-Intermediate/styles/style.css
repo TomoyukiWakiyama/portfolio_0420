@@ -1,0 +1,243 @@
+@charset "UTF-8";
+.notoEN-normal, .opacity-heading, .mainVisual__catch {
+  font-family: "Noto Serif", serif;
+}
+
+.notoEN-italic, .level2-heading, .header__logo {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+}
+
+.level2-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.level2-heading::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 5px;
+  margin-left: 30px;
+  background-color: #282F35;
+}
+
+.opacity-heading {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgba(23, 23, 23, 0.05);
+}
+
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body {
+  font-family: 'Noto Serif JP', serif;
+  letter-spacing: .05em;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* .header
+----------------------------------------*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+  padding: 0 15px;
+  height: 36px;
+  width: 100%;
+}
+
+.header__logo {
+  color: #fff;
+}
+
+/* .hamburger
+----------------------------------------*/
+.hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+}
+
+.hamburger__line {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* .mainVisual
+----------------------------------------*/
+.mainVisual {
+  position: relative;
+}
+
+.mainVisual__image img {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mainVisual__data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mainVisual__data {
+  width: 100%;
+  text-align: center;
+}
+
+.mainVisual__catch {
+  color: #fff;
+  font-size: 37px;
+  font-weight: bold;
+}
+
+.mainVisual__text {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: calc(50 / 30);
+}
+
+/* .concept
+----------------------------------------*/
+.concept {
+  margin-top: 100px;
+  padding: 0 15px;
+}
+
+.concept__title {
+  margin-top: 55px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: calc(30 / 20);
+}
+
+.concept__half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.concept__text {
+  font-weight: bold;
+}
+
+.concept__image {
+  margin-top: 30px;
+}
+
+.concept__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+@media (min-width: 480px) {
+  /******************************************************************
+
+Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+
+******************************************************************/
+}
+
+@media (min-width: 600px) {
+  /******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+}
+
+@media (min-width: 960px) {
+  /******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+}
+
+@media (min-width: 1280px) {
+  /******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /******************************************************************
+
+Stylesheet: Retinaディスプレイで適用
+
+******************************************************************/
+  /* 
+
+EXAMPLE 
+.icon {
+	background: url(images/test@2x.png) no-repeat;
+	background-size: 24px 24px;
+}
+
+*/
+}
+
+@media print {
+  /******************************************************************
+
+Stylesheet: プリンタのみに適用
+
+******************************************************************/
+}
+/*# sourceMappingURL=style.css.map */

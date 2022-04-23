@@ -1,0 +1,116 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body {
+    font-family: 'Noto Serif JP', serif;
+    letter-spacing: .05em;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/* .header
+----------------------------------------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    padding: 0 15px;
+    height:  36px;
+    width: 100%;
+    &__logo {
+        @extend .notoEN-italic;
+        color: #fff;
+    }
+}
+
+/* .hamburger
+----------------------------------------*/
+.hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    &__line {
+        display: block;
+        
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+    }
+}
+
+/* .mainVisual
+----------------------------------------*/
+.mainVisual {
+    position: relative;
+    &__image img {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__data {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__data {
+        width: 100%;
+        text-align: center;
+    }
+    &__catch {
+        @extend .notoEN-normal;
+        color: #fff;
+        // text-shadow: 0 3px 6px #444;
+        font-size: 37px;
+        font-weight: bold;
+    }
+    &__text {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: calc(50 / 30);
+    }
+}
+
+/* .concept
+----------------------------------------*/
+.concept {
+    margin-top: 100px;
+    padding: 0 15px;
+    &__title{
+      margin-top: 55px;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      line-height: calc(30 / 20);
+    }
+    &__half {
+        display: flex;
+        flex-direction: column;
+    }
+    &__text {
+        font-weight: bold;
+    }
+    &__image {
+        margin-top: 30px;
+    }
+    &__image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
