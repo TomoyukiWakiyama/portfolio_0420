@@ -1,6 +1,5 @@
 $cWhite: #fff;
 $notoEN: 'Noto Serif', serif;
-
 .notoEN-normal {
     font-family: $notoEN;
 }
@@ -12,7 +11,6 @@ $notoEN: 'Noto Serif', serif;
     display: flex;
     align-items: center;
     @extend .notoEN-italic;
-    text-transform: uppercase;
     font-size: 30px;
     &::after {
         content: "";
@@ -22,6 +20,14 @@ $notoEN: 'Noto Serif', serif;
         margin-left: 30px;
         background-color: #282F35;
     }
+    &._white {
+        justify-content: center;
+        margin-left: 90px;
+        color: #fff;
+        &::after {
+            background-color: #fff;
+        }
+    }
 }
 .opacity-heading {
     margin-top: 40px;
@@ -30,4 +36,21 @@ $notoEN: 'Noto Serif', serif;
     font-size: 40px;
     font-weight: 600;
     color: rgba(23,23,23, .05);
+    &._gray {
+        text-align: left;
+        color: #FFFFFF;
+        opacity: .1;
+    }
+}
+
+.buttonM {
+    display: block;
+    padding: 20px;
+    background-color: #F7D43F;
+    text-align: center;
+    color: #171717;
+    border-radius: 40px;
+    &:hover {
+        text-decoration: none;
+    }
 }

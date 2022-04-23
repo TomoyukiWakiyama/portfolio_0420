@@ -3,3 +3,17 @@
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+.worksList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    &__item {
+        margin: 0;
+        width: calc((100% - 34px) / 3);
+    }
+    &__item + &__item {
+        margin-top: 0;
+    }
+}

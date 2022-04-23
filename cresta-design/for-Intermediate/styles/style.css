@@ -3,7 +3,7 @@
   font-family: "Noto Serif", serif;
 }
 
-.notoEN-italic, .level2-heading, .header__logo {
+.notoEN-italic, .level2-heading, .header__logo, .serviceList__title {
   font-family: "Noto Serif", serif;
   font-style: italic;
 }
@@ -15,7 +15,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-transform: uppercase;
   font-size: 30px;
 }
 
@@ -28,12 +27,43 @@
   background-color: #282F35;
 }
 
+.level2-heading._white {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 90px;
+  color: #fff;
+}
+
+.level2-heading._white::after {
+  background-color: #fff;
+}
+
 .opacity-heading {
   margin-top: 40px;
   text-align: right;
   font-size: 40px;
   font-weight: 600;
   color: rgba(23, 23, 23, 0.05);
+}
+
+.opacity-heading._gray {
+  text-align: left;
+  color: #FFFFFF;
+  opacity: .1;
+}
+
+.buttonM {
+  display: block;
+  padding: 20px;
+  background-color: #F7D43F;
+  text-align: center;
+  color: #171717;
+  border-radius: 40px;
+}
+
+.buttonM:hover {
+  text-decoration: none;
 }
 
 /******************************************************************
@@ -52,6 +82,10 @@ ul {
 
 li {
   list-style: none;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 /* .header
@@ -145,7 +179,7 @@ li {
 /* .concept
 ----------------------------------------*/
 .concept {
-  margin-top: 100px;
+  margin: 100px auto 0;
   padding: 0 15px;
 }
 
@@ -184,6 +218,134 @@ li {
      object-position: center center;
 }
 
+/* .works
+----------------------------------------*/
+.works {
+  margin-top: 40px;
+  padding: 100px 0 40px;
+  background-image: url(../images/works-bgi@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.worksList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 50px auto 0;
+}
+
+.worksList__item {
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #fff;
+}
+
+.worksList__item + .worksList__item {
+  margin-top: 30px;
+}
+
+.worksList__image img {
+  max-width: none;
+  width: 100%;
+}
+
+.worksList__text {
+  width: 100%;
+  padding: 28px 20px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  line-height: calc(25 / 13);
+}
+
+.works__btn {
+  width: 235px;
+  margin: 80px auto 0;
+}
+
+/* .service
+----------------------------------------*/
+.service {
+  margin-top: 100px;
+}
+
+.service .level2-heading {
+  margin-left: 15px;
+}
+
+.serviceList {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.serviceList__item {
+  position: relative;
+}
+
+.serviceList__item + .serviceList__item {
+  margin-top: 30px;
+}
+
+.serviceList__image img {
+  width: 100%;
+}
+
+.serviceList__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* .contact
+----------------------------------------*/
+.contact {
+  margin-top: 64px;
+  padding-top: 100px;
+  padding-bottom: 140px;
+  background-image: url(../images/contact-bgi@2x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact__text {
+  margin-top: 80px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact__btn {
+  width: 235px;
+  margin: 30px auto 0;
+}
+
+/* .footer
+----------------------------------------*/
+.footer {
+  padding: 30px 0;
+}
+
+.footer .copyright {
+  text-align: center;
+  font-size: 14px;
+}
+
 @media (min-width: 480px) {
   /******************************************************************
 
@@ -198,6 +360,28 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+  .worksList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1000px;
+  }
+  .worksList__item {
+    margin: 0;
+    width: calc((100% - 34px) / 3);
+  }
+  .worksList__item + .worksList__item {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 960px) {
