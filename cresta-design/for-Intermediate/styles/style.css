@@ -8,6 +8,49 @@
   font-style: italic;
 }
 
+.buttonM {
+  display: block;
+  padding: 20px;
+  background-color: #F7D43F;
+  text-align: center;
+  color: #171717;
+  border-radius: 40px;
+}
+
+.buttonM:hover {
+  text-decoration: none;
+}
+
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body {
+  font-family: 'Noto Serif JP', serif;
+  letter-spacing: .05em;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.pc-only {
+  display: inline;
+}
+
+.sp-only {
+  display: block;
+}
+
 .level2-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,41 +96,6 @@
   opacity: .1;
 }
 
-.buttonM {
-  display: block;
-  padding: 20px;
-  background-color: #F7D43F;
-  text-align: center;
-  color: #171717;
-  border-radius: 40px;
-}
-
-.buttonM:hover {
-  text-decoration: none;
-}
-
-/******************************************************************
-
-Stylesheet: ベーススタイル
-
-******************************************************************/
-body {
-  font-family: 'Noto Serif JP', serif;
-  letter-spacing: .05em;
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-p {
-  margin-bottom: 0;
-}
-
 /* .header
 ----------------------------------------*/
 .header {
@@ -124,14 +132,34 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border: 0;
   background-color: transparent;
 }
 
 .hamburger__line {
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.hamburger__line::before {
+  position: absolute;
+  content: "";
   display: block;
+  top: -10px;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.hamburger__line::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 10px;
   width: 30px;
   height: 3px;
   background-color: #fff;
@@ -360,6 +388,46 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+  .pc-only {
+    display: block;
+  }
+  .sp-only {
+    display: inline;
+  }
+  /* .concept
+----------------------------------------*/
+  .concept {
+    max-width: 1000px;
+  }
+  .concept__title {
+    font-size: 30px;
+    line-height: calc(50 / 30);
+  }
+  .concept__half {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 60px;
+  }
+  .concept__text {
+    width: calc((100% - 60px) / 2);
+  }
+  .concept__image {
+    margin-top: 0;
+    width: calc((100% - 60px) / 2);
+  }
+  /* .workList
+----------------------------------------*/
   .worksList {
     display: -webkit-box;
     display: -ms-flexbox;

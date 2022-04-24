@@ -3,6 +3,39 @@
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+.pc-only {
+    display: block;
+}
+.sp-only {
+    display: inline;
+}
+
+/* .concept
+----------------------------------------*/
+.concept {
+    // padding: 0;
+    max-width: 1000px;
+    &__title {
+        font-size: 30px;
+        line-height: calc(50 / 30);
+    }
+    &__half {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 60px;
+    }
+    &__text {
+        width: calc((100% - 60px) / 2);
+    }
+    &__image {
+        margin-top: 0;
+        width: calc((100% - 60px) / 2);
+    }
+}
+/* .workList
+----------------------------------------*/
 .worksList {
     display: flex;
     flex-wrap: wrap;
