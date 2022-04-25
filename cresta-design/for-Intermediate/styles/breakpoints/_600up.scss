@@ -14,7 +14,6 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 ----------------------------------------*/
 .concept {
     // padding: 0;
-    max-width: 1000px;
     &__title {
         font-size: 30px;
         line-height: calc(50 / 30);
@@ -46,6 +45,15 @@ Stylesheet: 600px以上のタブレットやモニタで適用
         margin: 0;
         width: calc((100% - 34px) / 3);
     }
+    &__item + &__item {
+        margin-top: 0;
+    }
+}
+/* .service
+----------------------------------------*/
+.serviceList {
+    display: flex;
+    flex-direction: row;
     &__item + &__item {
         margin-top: 0;
     }

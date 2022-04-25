@@ -1,89 +1,51 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const main = new Main();
-});
+    // IntersectionObserver オブジェクトを作成
+    // 交差時に実行するコールバック関数を渡す
+    // const observer = new IntersectionObserver((entries) => {
+        // entriesは監視対象すべてが入っているリスト  
+        // for(const e of entries) {
+            // mainVisualが見えていたらtrue, 
+            // isIntersecting プロパティは交差しているかどうかの真偽値
+            // viewport に交差し、入ったときに isIntersecting === true、出たときに false になる
+            // if(e.isIntersecting) {
+            //     // document.getElementById('headerBG').style.backgroundColor = 'green';
+            //     console.log('inview');
+            // } else {
+            //     // document.getElementById('headerBG').style.backgroundColor = 'pink';
+            //     console.log('outview');
+            // }
+        // }
+        // entries.forEach(entry => {
+        //     if(entry.isIntersecting) {
+        //         // document.getElementById('headerBG').style.backgroundColor = 'green';
+        //         console.log('inview');
+        //     } else {
+        //         // document.getElementById('headerBG').style.backgroundColor = 'pink';
+        //         console.log('outview');
+        //     }
+        // });
+    // });
+    // observe メソッドに監視対象要素を引数として渡すことで監視されるようになります
+    // observer.observe(document.querySelector('.mainVisual'));
 
-class Main {
-    constructor() {
-        this.header = document.querySelector('.header');
-        this.sides = document.querySelectorAll('.side');
-        this._observers = [];
-        this._init();
-    }
-
-    set observers(val) {
-        this._observers.push(val);
-    }
-
-    get observers() {
-        return this._observers;
-    }
-
-    _init() {
-        new MobileMenu();
-        this.hero = new HeroSlider('.swiper-container');
-        Pace.on('done', this._paceDone.bind(this));
-    }
-
-    _paceDone() {
-        this._scrollInit();
-    }
-
-    _inviewAnimation(el, inview) {
-        if(inview) {
-            el.classList.add('inview');
-        }else {
-            el.classList.remove('inview');
-        }
-    }
-
-    _navAnimation(el, inview) {
-        if(inview) {
-            this.header.classList.remove('triggered');
-        } else {
-            this.header.classList.add('triggered');
-        }
-    }
-
-    _sideAnimation(el, inview) {
-        if(inview) {
-            this.sides.forEach(side => side.classList.add('inview'));
-        } else {
-            this.sides.forEach(side => side.classList.remove('inview'));
-        }
-    }
-
-    _textAnimation(el, inview) {
-        if(inview) {
-            const ta = new TweenTextAnimation(el);
-            ta.animate();
-        }
-    }
-
-    _toggleSlideAnimation(el, inview) {
-        if(inview) {
-            this.hero.start();
-        } else {
-            this.hero.stop();
-        }
-    }
-
-    _destroyObservers() {
-        this.observers.forEach(ob => {
-            ob.destroy();
+    const mainVisual = document.querySelector('.mainVisual');
+    const header = document.querySelector('.header');
+    const callback = function(entries, observer) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                // console.log(entry);
+                header.classList.remove('_scroll-gray');
+            } else {
+                // console.log(entry);
+                header.classList.add('_scroll-gray');
+            }
         });
     }
-
-    destroy() {
-        this._destroyObservers();
-    }
-
-    _scrollInit() {
-        this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
-        this.observers = new ScrollObserver('.cover-slide', this._inviewAnimation);
-        this.observers = new ScrollObserver('.appear', this._inviewAnimation);
-        this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation, {rootMargin: "-200px 0px"});
-        this.observers = new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
-        this.observers = new ScrollObserver('#main-content', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px"});
-    }
-}
-
+    const options = {
+        // 実際にはrootを変更することはほとんどない
+        root: null, 
+        rootMargin: "-120px 0px 0px 0px"
+    };
+    const io = new IntersectionObserver(callback, options);
+    io.observe(mainVisual);
+});

@@ -26,6 +26,11 @@
 Stylesheet: ベーススタイル
 
 ******************************************************************/
+.swiper {
+  width: auto;
+  height: 100vh;
+}
+
 body {
   font-family: 'Noto Serif JP', serif;
   letter-spacing: .05em;
@@ -108,16 +113,22 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  top: 30px;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   padding: 0 15px;
-  height: 36px;
+  height: 66px;
   width: 100%;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .header__logo {
   color: #fff;
+}
+
+.header._scroll-gray {
+  background-color: #282F35;
 }
 
 /* .hamburger
@@ -207,8 +218,14 @@ p {
 /* .concept
 ----------------------------------------*/
 .concept {
+  max-width: 1200px;
   margin: 100px auto 0;
   padding: 0 15px;
+}
+
+.concept__container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .concept__title {
@@ -255,6 +272,11 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.works__container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .worksList {
@@ -396,9 +418,6 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   }
   /* .concept
 ----------------------------------------*/
-  .concept {
-    max-width: 1000px;
-  }
   .concept__title {
     font-size: 30px;
     line-height: calc(50 / 30);
@@ -448,6 +467,20 @@ Stylesheet: 600px以上のタブレットやモニタで適用
     width: calc((100% - 34px) / 3);
   }
   .worksList__item + .worksList__item {
+    margin-top: 0;
+  }
+  /* .service
+----------------------------------------*/
+  .serviceList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .serviceList__item + .serviceList__item {
     margin-top: 0;
   }
 }

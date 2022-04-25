@@ -3,6 +3,11 @@
 Stylesheet: ベーススタイル
 
 ******************************************************************/
+.swiper {
+    width: auto;
+    height: 100vh;
+  }
+
 body {
     font-family: 'Noto Serif JP', serif;
     letter-spacing: .05em;
@@ -63,18 +68,21 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 30px;
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    z-index: 100;
     padding: 0 15px;
-    height:  36px;
+    height:  66px;
     width: 100%;
+    transition: all .6s;
     &__logo {
         @extend .notoEN-italic;
         color: #fff;
     }
 }
-
+.header._scroll-gray {
+    background-color: #282F35;
+}
 /* .hamburger
 ----------------------------------------*/
 .hamburger {
@@ -148,8 +156,13 @@ p {
 /* .concept
 ----------------------------------------*/
 .concept {
+    max-width: 1200px;
     margin: 100px auto 0;
     padding: 0 15px;
+    &__container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
     &__title{
       margin-top: 55px;
       font-size: 20px;
@@ -184,7 +197,12 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
+
 .worksList {
     display: flex;
     flex-direction: column;
