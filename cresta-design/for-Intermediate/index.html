@@ -8,13 +8,27 @@
     <!-- font-family: 'Noto Serif JP', serif; -->
     <!-- font-family: 'Noto Serif', serif; -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header class="header">
-        <h1 class="header__logo">Cresta Design</h1>
-        <button class="hamburger"><span class="hamburger__line"></span></button>
+        <div class="header__container">
+            <h1 class="header__logo">Cresta Design</h1>
+            <button class="hamburger"><span class="hamburger__line"></span></button>
+            <nav class="gnav">
+                <ul class="gnavList">
+                    <li class="gnavList__item"><a class="gnavList__link" href="#">Concept</a></li>
+                    <li class="gnavList__item"><a class="gnavList__link" href="#">Service</a></li>
+                    <li class="gnavList__item"><a class="gnavList__link" href="#">Works</a></li>
+                    <li class="gnavList__item"><a class="gnavList__link" href="#">Contact</a></li>
+                </ul>
+                <!-- /.gnavList -->
+            </nav>
+            <!-- /.gnav -->
+        </div>
+        <!-- /.header__container -->
     </header>
     <!-- /.header -->
     <main>
@@ -31,8 +45,11 @@
         </section>
         <!-- /.mainVisual -->
         <section class="concept">
-            <div class="concept__container">
+            <div class="level2-heading__wrapper">
                 <h2 class="level2-heading">CONCEPT</h2>
+            </div>
+            <!-- /.level2-heading__wrapper -->
+            <div class="concept__container">
                 <p class="concept__title">“働きたくなる空間”をデザインすることで<span class="pc-only">人々を幸せにする。</span></p>
                 <div class="concept__half">
                     <p class="concept__text">私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。</p>
@@ -41,7 +58,7 @@
                 <!-- /.concept__half -->
             </div>
             <!-- /.concept__container -->
-                <p class="opacity-heading">Our Concept</p>
+            <p class="opacity-heading">Our Concept</p>
         </section>
         <!-- /.concept -->
         <section class="works">
@@ -69,7 +86,10 @@
         </section>
         <!-- /.works -->
         <section class="service">
-            <h2 class="level2-heading">Service</h2>
+            <div class="level2-heading__wrapper">
+                <h2 class="level2-heading">Service</h2>
+            </div>
+            <!-- /.level2-heading__wrapper -->
             <ul class="serviceList">
                 <li class="serviceList__item">
                     <div class="serviceList__image"><img src="images/service-img01@2x.jpg" alt=""></div>
@@ -85,11 +105,17 @@
                 </li>
             </ul>
             <!-- /.serviceList -->
-            <p class="opacity-heading">Our Service</p>
+            <div class="opacity-heading__wrapper">
+                <p class="opacity-heading">Our Service</p>
+            </div>
+            <!-- /.opacity-heading__wrapper -->
         </section>
         <!-- /.service -->
         <section class="contact">
-            <h2 class="level2-heading _white">Contact</h2>
+            <div class="level2-heading__wrapper _right">
+                <h2 class="level2-heading _white">Contact</h2>
+            </div>
+            <!-- /.level2-heading__wrapper -->
             <p class="contact__text">お気軽にご相談ください。</p>
             <p class="contact__btn"><a href="#" class="buttonM">Contact</a></p>
         </section>
@@ -100,6 +126,7 @@
         <p class="copyright">©︎cresta.design all rights reserved</p>
     </footer>
     <!-- /.footer -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

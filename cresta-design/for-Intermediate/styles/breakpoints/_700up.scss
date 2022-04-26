@@ -9,6 +9,41 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 .sp-only {
     display: inline;
 }
+/* .hamburger
+----------------------------------------*/
+.hamburger {
+    display: none;
+}
+/* .gnav
+----------------------------------------*/
+.gnav {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    align-items: center;
+}
+.gnavList {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    &__link {
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 44px;
+        color: #fff;
+        border-bottom: 3px solid transparent;
+        transition: all .3s;
+        &:hover {
+            color: #fff;
+            // background-color: rgba(255, 0, 0, 0.6);
+            border-bottom: 3px solid rgb(247, 212, 63);
+            text-decoration: none;
+        }
+    }
+}
+
 
 /* .concept
 ----------------------------------------*/
@@ -54,6 +89,9 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 .serviceList {
     display: flex;
     flex-direction: row;
+    &__item {
+        flex: 1;
+    }
     &__item + &__item {
         margin-top: 0;
     }

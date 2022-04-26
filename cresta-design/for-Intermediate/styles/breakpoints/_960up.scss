@@ -3,3 +3,51 @@
 Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
+.level2-heading__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    &._right {
+        max-width: 1200px;
+    }
+    
+}
+.level2-heading {
+    font-size: 60px;
+    &::after {
+        width: 200px;
+    }
+    &._white {
+        justify-content: right;
+        margin-left: 200px;
+    }
+}
+.opacity-heading__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.opacity-heading {
+    font-size: 90px;
+}
+
+
+/* .header
+----------------------------------------*/
+
+
+
+/* .mainVisual
+----------------------------------------*/
+.mainVisual {
+    &__data {
+        max-width: 1200px;
+        text-align: left;
+        padding-left: 15px;
+    }
+    &__catch {
+        font-size: 70px;
+    }
+    &__text {
+        font-size: 40px;
+        margin-left: 1rem;
+    }
+}

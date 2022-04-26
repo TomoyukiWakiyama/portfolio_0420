@@ -104,6 +104,17 @@ p {
 /* .header
 ----------------------------------------*/
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  padding: 0 15px;
+  width: 100%;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.header__container {
+  padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,14 +124,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  padding: 0 15px;
-  height: 66px;
-  width: 100%;
-  -webkit-transition: all .6s;
-  transition: all .6s;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -176,6 +181,25 @@ p {
   background-color: #fff;
 }
 
+/* .gnav
+----------------------------------------*/
+@media screen and (max-width: 699px) {
+  .gnav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 75px;
+    z-index: 100;
+    width: 100%;
+    height: calc(100vh - 75px);
+    background-color: #1B1310;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /*iOSで慣性スクロール有効化*/
+    text-align: center;
+  }
+}
+
 /* .mainVisual
 ----------------------------------------*/
 .mainVisual {
@@ -190,14 +214,12 @@ p {
 }
 
 .mainVisual__data {
+  max-width: 1200px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.mainVisual__data {
   width: 100%;
   text-align: center;
 }
@@ -329,7 +351,7 @@ p {
 }
 
 .serviceList {
-  margin-top: 80px;
+  margin: 80px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,6 +391,7 @@ p {
   padding-top: 100px;
   padding-bottom: 140px;
   background-image: url(../images/contact-bgi@2x.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -404,7 +427,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 ******************************************************************/
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   /******************************************************************
 
 Stylesheet: 600px以上のタブレットやモニタで適用
@@ -415,6 +438,47 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   }
   .sp-only {
     display: inline;
+  }
+  /* .hamburger
+----------------------------------------*/
+  .hamburger {
+    display: none;
+  }
+  /* .gnav
+----------------------------------------*/
+  .gnav {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .gnavList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 0;
+  }
+  .gnavList__link {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 44px;
+    color: #fff;
+    border-bottom: 3px solid transparent;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .gnavList__link:hover {
+    color: #fff;
+    border-bottom: 3px solid #f7d43f;
+    text-decoration: none;
   }
   /* .concept
 ----------------------------------------*/
@@ -480,6 +544,11 @@ Stylesheet: 600px以上のタブレットやモニタで適用
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .serviceList__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
   .serviceList__item + .serviceList__item {
     margin-top: 0;
   }
@@ -491,6 +560,48 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
+  .level2-heading__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .level2-heading__wrapper._right {
+    max-width: 1200px;
+  }
+  .level2-heading {
+    font-size: 60px;
+  }
+  .level2-heading::after {
+    width: 200px;
+  }
+  .level2-heading._white {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    margin-left: 200px;
+  }
+  .opacity-heading__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .opacity-heading {
+    font-size: 90px;
+  }
+  /* .header
+----------------------------------------*/
+  /* .mainVisual
+----------------------------------------*/
+  .mainVisual__data {
+    max-width: 1200px;
+    text-align: left;
+    padding-left: 15px;
+  }
+  .mainVisual__catch {
+    font-size: 70px;
+  }
+  .mainVisual__text {
+    font-size: 40px;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 1280px) {

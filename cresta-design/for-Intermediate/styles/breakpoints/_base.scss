@@ -65,16 +65,20 @@ p {
 /* .header
 ----------------------------------------*/
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     top: 0;
     z-index: 100;
     padding: 0 15px;
-    height:  66px;
     width: 100%;
     transition: all .6s;
+    &__container {
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     &__logo {
         @extend .notoEN-italic;
         color: #fff;
@@ -119,6 +123,24 @@ p {
     }
 }
 
+/* .gnav
+----------------------------------------*/
+@media screen and (max-width: 699px) {
+    .gnav {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 75px;
+        z-index: 100;
+        width: 100%;
+        height: calc(100vh - 75px);
+        background-color: #1B1310;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /*iOSで慣性スクロール有効化*/
+        text-align: center;
+    }
+}
+
 /* .mainVisual
 ----------------------------------------*/
 .mainVisual {
@@ -129,12 +151,11 @@ p {
         object-fit: cover;
     }
     &__data {
+        max-width: 1200px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
-    &__data {
         width: 100%;
         text-align: center;
     }
@@ -241,7 +262,7 @@ p {
     }
 }
 .serviceList {
-    margin-top: 80px;
+    margin: 80px auto 0;
     display: flex;
     flex-direction: column;
     &__item {
@@ -272,6 +293,7 @@ p {
     padding-top: 100px;
     padding-bottom: 140px;
     background-image: url(../images/contact-bgi@2x.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     &__text {
