@@ -1,13 +1,9 @@
 /******************************************************************
 
 Stylesheet: ベーススタイル
+index.html
 
 ******************************************************************/
-.swiper {
-    width: auto;
-    height: 100vh;
-  }
-
 body {
     font-family: 'Noto Serif JP', serif;
     letter-spacing: .05em;
@@ -79,9 +75,12 @@ p {
         max-width: 1200px;
         margin: 0 auto;
     }
-    &__logo {
+    &__logo a {
         @extend .notoEN-italic;
         color: #fff;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 .header._scroll-gray {
@@ -141,18 +140,25 @@ p {
     }
 }
 
-/* .mainVisual
+/* .swiper
 ----------------------------------------*/
-.mainVisual {
+.swiper-wrapper {
+    /* wrapperのサイズを調整 */
     position: relative;
-    &__image img {
-        height: 100vh;
-        width: 100%;
-        object-fit: cover;
-    }
+    width: 100%;
+    height: 100vh;
+}
+.swiper-slide img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper {
     &__data {
         max-width: 1200px;
         position: absolute;
+        z-index: 1;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -316,4 +322,22 @@ p {
         text-align: center;
         font-size: 14px;
     }
+}
+
+.pageHeader {
+    height: 360px;
+}
+
+/******************************************************************
+
+Stylesheet: ベーススタイル
+contact.html
+
+******************************************************************/
+
+.pageHeader._contact {
+    background-image: url(../images/contact-page-bgi@2x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

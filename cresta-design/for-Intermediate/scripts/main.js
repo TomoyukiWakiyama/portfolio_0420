@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        speed: 900,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+
+        //autoplay
+        autoplay: {
+            delay: 2500,
+        },
+    });
     // IntersectionObserver オブジェクトを作成
     // 交差時に実行するコールバック関数を渡す
     // const observer = new IntersectionObserver((entries) => {
@@ -28,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // observe メソッドに監視対象要素を引数として渡すことで監視されるようになります
     // observer.observe(document.querySelector('.mainVisual'));
 
-    const mainVisual = document.querySelector('.mainVisual');
+    const swiperWrapper = document.querySelector('.swiper');
     const header = document.querySelector('.header');
     const callback = function(entries, observer) {
         entries.forEach(entry => {
@@ -47,5 +74,5 @@ document.addEventListener('DOMContentLoaded', function () {
         rootMargin: "-120px 0px 0px 0px"
     };
     const io = new IntersectionObserver(callback, options);
-    io.observe(mainVisual);
+    io.observe(swiperWrapper);
 });

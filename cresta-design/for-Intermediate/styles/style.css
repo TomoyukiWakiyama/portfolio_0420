@@ -1,9 +1,9 @@
 @charset "UTF-8";
-.notoEN-normal, .opacity-heading, .mainVisual__catch {
+.notoEN-normal, .opacity-heading, .swiper__catch {
   font-family: "Noto Serif", serif;
 }
 
-.notoEN-italic, .level2-heading, .header__logo, .serviceList__title {
+.notoEN-italic, .level2-heading, .header__logo a, .serviceList__title {
   font-family: "Noto Serif", serif;
   font-style: italic;
 }
@@ -24,13 +24,9 @@
 /******************************************************************
 
 Stylesheet: ベーススタイル
+index.html
 
 ******************************************************************/
-.swiper {
-  width: auto;
-  height: 100vh;
-}
-
 body {
   font-family: 'Noto Serif JP', serif;
   letter-spacing: .05em;
@@ -128,8 +124,12 @@ p {
   margin: 0 auto;
 }
 
-.header__logo {
+.header__logo a {
   color: #fff;
+}
+
+.header__logo a:hover {
+  text-decoration: none;
 }
 
 .header._scroll-gray {
@@ -200,22 +200,26 @@ p {
   }
 }
 
-/* .mainVisual
+/* .swiper
 ----------------------------------------*/
-.mainVisual {
+.swiper-wrapper {
+  /* wrapperのサイズを調整 */
   position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
-.mainVisual__image img {
+.swiper-slide img {
   height: 100vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.mainVisual__data {
+.swiper__data {
   max-width: 1200px;
   position: absolute;
+  z-index: 1;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -224,13 +228,13 @@ p {
   text-align: center;
 }
 
-.mainVisual__catch {
+.swiper__catch {
   color: #fff;
   font-size: 37px;
   font-weight: bold;
 }
 
-.mainVisual__text {
+.swiper__text {
   color: #fff;
   font-size: 30px;
   font-weight: 600;
@@ -419,6 +423,23 @@ p {
   font-size: 14px;
 }
 
+.pageHeader {
+  height: 360px;
+}
+
+/******************************************************************
+
+Stylesheet: ベーススタイル
+contact.html
+
+******************************************************************/
+.pageHeader._contact {
+  background-image: url(../images/contact-page-bgi@2x.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media (min-width: 480px) {
   /******************************************************************
 
@@ -588,17 +609,17 @@ Stylesheet: 960px以上のモニタで適用
   }
   /* .header
 ----------------------------------------*/
-  /* .mainVisual
+  /* .swiper
 ----------------------------------------*/
-  .mainVisual__data {
+  .swiper__data {
     max-width: 1200px;
     text-align: left;
     padding-left: 15px;
   }
-  .mainVisual__catch {
+  .swiper__catch {
     font-size: 70px;
   }
-  .mainVisual__text {
+  .swiper__text {
     font-size: 40px;
     margin-left: 1rem;
   }

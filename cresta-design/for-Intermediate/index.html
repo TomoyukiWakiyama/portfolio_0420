@@ -8,21 +8,21 @@
     <!-- font-family: 'Noto Serif JP', serif; -->
     <!-- font-family: 'Noto Serif', serif; -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header class="header">
         <div class="header__container">
-            <h1 class="header__logo">Cresta Design</h1>
+            <h1 class="header__logo"><a href="index.html">Cresta Design</a></h1>
             <button class="hamburger"><span class="hamburger__line"></span></button>
             <nav class="gnav">
                 <ul class="gnavList">
                     <li class="gnavList__item"><a class="gnavList__link" href="#">Concept</a></li>
                     <li class="gnavList__item"><a class="gnavList__link" href="#">Service</a></li>
                     <li class="gnavList__item"><a class="gnavList__link" href="#">Works</a></li>
-                    <li class="gnavList__item"><a class="gnavList__link" href="#">Contact</a></li>
+                    <li class="gnavList__item"><a class="gnavList__link" href="contact.html">Contact</a></li>
                 </ul>
                 <!-- /.gnavList -->
             </nav>
@@ -32,18 +32,21 @@
     </header>
     <!-- /.header -->
     <main>
-        <section class="mainVisual">
-            <div class="mainVisual__image">
-                <img src="images/fv-bgi_01@2x.jpg" alt="">
+        <section class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/fv-bgi_01@2x.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fv-bgi_02@2x.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fv-bgi_03@2x.jpg" alt=""></div>
             </div>
-            <!-- /.mainVisual__image -->
-            <div class="mainVisual__data">
-                <p class="mainVisual__catch">Design for Smile.</p>
-                <p class="mainVisual__text">快適なオフィスを<span class="sp-only"></span>デザインする</p>
+            <div class="swiper__data">
+                <p class="swiper__catch">Design for Smile.</p>
+                <p class="swiper__text">快適なオフィスを<span class="sp-only"></span>デザインする</p>
             </div>
-            <!-- /.mainVisual__data -->
         </section>
-        <!-- /.mainVisual -->
+        <!-- /.swiper -->
+
         <section class="concept">
             <div class="level2-heading__wrapper">
                 <h2 class="level2-heading">CONCEPT</h2>
